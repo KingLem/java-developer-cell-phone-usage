@@ -49,4 +49,7 @@ I opted to use OpenCSV for reading from and writing to the designated CSV files.
 
 From there, the next ambiguity was whether the CSV file names were to be static or read in at time of execution. I chose to have them be static, because that's just easier to deal with.
 
-After that, I came to an ambiguity regarding headers for the monthly data and minutes. I decided I didn't want to map the values to dates and just output the data. 
+After that, I came to an ambiguity regarding headers for the monthly data and minutes. I decided I didn't want to map the values to dates and just output the data.
+
+I realized that I'd probably want to match data to date string headers, so I had to gather the unique dates into a Set, move that Set into a List (ensuring uniqueness of date Strings), sort the list, and then append those date strings to the list of headers.
+

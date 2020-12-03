@@ -1,12 +1,10 @@
-package java.model;
-
-import java.util.List;
+package main.model;
 
 public class CellPhoneUsageByMonth {
   private int emplyeeId;
   private String date;
-  private List<Integer> totalMinutes;
-  private List<Float> totalData;
+  private int totalMinutes;
+  private float totalData;
 
   public int getEmplyeeId() {
     return emplyeeId;
@@ -24,19 +22,19 @@ public class CellPhoneUsageByMonth {
     this.date = date;
   }
 
-  public List<Integer> getTotalMinutes() {
+  public int getTotalMinutes() {
     return totalMinutes;
   }
 
-  public void setTotalMinutes(List<Integer> totalMinutes) {
+  public void setTotalMinutes(int totalMinutes) {
     this.totalMinutes = totalMinutes;
   }
 
-  public List<Float> getTotalData() {
+  public float getTotalData() {
     return totalData;
   }
 
-  public void setTotalData(List<Float> totalData) {
+  public void setTotalData(float totalData) {
     this.totalData = totalData;
   }
 }

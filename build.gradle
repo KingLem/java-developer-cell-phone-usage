@@ -31,16 +31,24 @@ dependencies {
     testImplementation 'junit:junit:4.13'
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/src'
+        }
+    }
+}
+
 application {
     // Define the main class for the application.
-    mainClassName = 'java.App'
+    mainClassName = 'main.App'
 }
 
 jar {
     manifest {
         attributes(
                 'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                'Main-Class': 'java.App'
+                'Main-Class': 'main.App'
         )
     }
 
